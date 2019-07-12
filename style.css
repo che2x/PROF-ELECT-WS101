@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="styles.css">
+<style>
+h1 {
+  color: blue;
+  font-family: verdana;
+  font-size: 300%;
+  text-align: center;
+}
+p  {
+  color: red;
+  font-family: courier;
+  font-size: 160%;
+  border: 1px solid powderblue;
+  padding: 30px;
+  margin: 50px;
+  text-align: center;
+}
+#p01 {
+  color: blue;
+  text-align: center;
+}
+p.error {
+  color: red;
+}
+</style>
+</head>
+<body>
+
+<h1>WELCOME TO THE WORLD</h1>
+<p>Hello World</p>
+<p id="p01">I am Cherehil Galamiton</p>
+<p class="error">I am different</p>
+
+</body>
+</html>
