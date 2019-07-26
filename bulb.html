@@ -5,20 +5,20 @@
 function light(sw) {
   var pic;
   if (sw == 0) {
-    pic = "img/pic_bulboff.gif"
+    pic = "img/off.gif"
   } else {
-    pic = "img/pic_bulbon.gif"
+    pic = "img/on.gif"
   }
   document.getElementById('myImage').src = pic;
 }
 </script>
 
-<img id="myImage" src="img/pic_bulboff.gif" width="100" height="180">
+<img id="myImage" src="img/off.gif" width="100" height="180">
 
 <p>
 <button type="button" onclick="light(1)">Light On</button>
 <button type="button" onclick="light(0)">Light Off</button>
 </p>
-
+<script></script>
 </body>
 </html>
