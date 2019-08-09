@@ -2,43 +2,85 @@
 <html>
 <head>
 <title> Ass</title>
-<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="stylesheet" href="./assets/css/styles.css">
+<link rel="stylesheet" href="./assets/css/materialize.min.css">
+ <link rel="stylesheet" href="./assets/css/material-font.css">
 </head>
 <body style="background-image: url(./assets/img/cs.jpg);">
+  
+  <ul id="slide-out" class="sidenav" onclick="myFunction(this)">
+    <li><div class="user-view">
+      <div class="background">
+        <div class="card-panel #e040fb purple accent-2" style="height: 200px"></div>
+      </div>
+      <a href="#user"><img class="circle" src="./assets/img/c.jpeg "></a>
+      <a href="#name"><span class="white-text name">Cherehil B. Galamiton</span></a>
+      <a href="#email"><span class="white-text email">cherehilgalamiton@gmail.com</span></a>
+    </div></li>
+    <div class="card-panel #18ffff cyan accent-2" style="height: 510px">
+    <li><a class="waves-effect" href="index.html">Home</a></li>
+    <li><a class="waves-effect" href="blog.html">Blog</a></li>
+    <li><a class="waves-effect" href="login.html">Login</a></li>
+  </ul></div>
+  <a href="#" data-target="slide-out" class="sidenav-trigger btn-floating pulse" style="margin-top: 20px"><i class="material-icons">menu</i></a>
+  
         <div id="container">
                 <div id="header"></div>
                 <h1 id="log">WELCOME TO MY PAGE</h1>
-                
-        <button id="log1"  onclick="document.getElementById('id01').style.display='block'">Login</button>
+                <button id="log1"  onclick="document.getElementById('id01').style.display='block' " class="btn-floating btn-large pulse">Login</button>
 
-        <div id="id01" class="modal">
-          
-          <form class="modal-content animate" action="index.html">
+        <div id="id01" class="modal" style="width: 480px;">
+
             <div class="imgcontainer">
-              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-              <img src="./assets/img/img_avatar2.png" alt="Avatar" class="avatar">
-            </div>
-        
-            <div class="container">
-              <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" required>
-        
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="./assets/img/img_avatar2.png" alt="Avatar" class="avatar">
+              </div>
+                 <div class="containerb">
+                    <label ><b>Username:</b></label> 
+                    <input type="text" placeholder="" id="uname" required>
                 
-              <a href="index.html"><button type="submit" value="submit">Login</button></a>
-              <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-              </label>
-            </div>
-        
-            <div class="container" style="background-color:#f1f1f1">
-              <button type="close" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <label ><b>Password:</b></label>
+                    <input type="password" placeholder="" id="psw" required>
+                        
+                    <button type="submit" onclick="validateform()" id="btn">Login</button>
+                    <script>
+                      function validateform() {
+                        var uname = document.getElementById('uname').value;
+                        var psw = document.getElementById('psw').value;
+                        if (uname == "user" && psw == "user"){
+                           window.location = "index.html";
+                          alert("Welcome User!");
+                          return true;
+                        }else if (uname == "admin" && psw == "admin"){
+                           window.location = "index.html";
+                          alert("Welcome Admin!");
+                          return true;
+                          }else{
+                          alert("Unauthorized Access! \nInvalid Account");
+                          return false;
+                      }
+                    }
+                      </script>
              
-            </div>
-          </form>
-        </div>
-        </div>
+                  <div class="container">
+                      <a href="login.html"><button type="close" name="exit" class="cancelbtn">Cancel</button></a>
+      
+                    <span class="psw">Register</span>
+      
+                  </div>
+                  </div>
+                </div>
         
+      
+        <script src="./assets/js/materialize.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+  
+           
+        });
+        </script>
+       
 </body>
 </html>

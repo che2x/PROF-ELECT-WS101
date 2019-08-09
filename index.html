@@ -1,35 +1,49 @@
 <!DOCTYPE html>
 <head>
     <title>Ass</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/materialize.min.css">
+    <link rel="stylesheet" href="./assets/css/material-font.css">
 </head>
 <body style="background-image: url(./assets/img/cs.jpg);">
-    
-    <script src="./assets/js/script.js"></script>
-    <a href="./assets/php/its.php/index.html"></a>
-    
-    <div id="container"> 
-            <div id="header"></div>
+    <ul id="slide-out" class="sidenav" onclick="myFunction(this)">
+        <li><div class="user-view">
+          <div class="background">
+            <div class="card-panel #e040fb purple accent-2" style="height: 200px"></div>
+          </div>
+          <a href="#user"><img class="circle" src="./assets/img/c.jpeg "></a>
+          <a href="#name"><span class="white-text name">Cherehil B. Galamiton</span></a>
+          <a href="#email"><span class="white-text email">cherehilgalamiton@gmail.com</span></a>
+        </div></li>
+        <div class="card-panel #18ffff cyan accent-2" style="height: 510px">
+        <li><a class="waves-effect" href="index.html">Home</a></li>
+        <li><a class="waves-effect" href="blog.html">Blog</a></li>
+        <li><a class="waves-effect" href="login.html">Login</a></li>
+      </ul></div>
+      <a href="#" data-target="slide-out" class="sidenav-trigger btn-floating pulse" style="margin-top: 20px"><i class="material-icons">menu</i></a>
+  
+     <div id="container"> 
+             <div id="header"></div>
 
             <h1>WELCOME TO MY PAGE</h1>
-            <img id="index" src="./assets/img/c.jpeg ">
-           
-            <ul class="navbar">
-                    <a class="active" href="index.html">Home</a>
-                    <a href="blog.html">Blog</a> 
-                    <a  href="login.html" >Login</a></button>
-                     </ul>
-
+            <img  id="c" src="./assets/img/c.jpeg ">
+            
         <b><p> Sometimes you WIN, Sometimes you LEARN.<br>
             Be STRONG, because things will get BETTER. It may be STORMY now,<br>
             but it NEVER rains FOREVER.<br>
             Push YOURSELF, because no one ELSE is <br>going to do it for YOU.
     </p></b>
-    <button  id="bot" type="button"
-    onclick="document.getElementById('demo').innerHTML = Date()">
-    Click me to display Date and Time.</button>
-    <p id="demo"></p>
-    
+  
     </div>
+    <script src="./assets/js/materialize.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.collapsible');
+        var instances = M.Collapsible.init(elems);
+        var elems = document.querySelectorAll('.scrollspy');
+        var instances = M.ScrollSpy.init(elems);
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+    });
+    </script>
 </body>
 </html>

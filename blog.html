@@ -2,34 +2,56 @@
 <html>
 <head>
 <title> Ass</title>
-<link rel="stylesheet" href="./assets/css/style.css">
+ <link rel="stylesheet" href="./assets/css/materialize.min.css">
+ <link rel="stylesheet" href="./assets/css/material-font.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body style="background-image: url(./assets/img/cs.jpg);">
+
+  <ul id="slide-out" class="sidenav" onclick="myFunction(this)">
+    <li><div class="user-view">
+      <div class="background">
+        <div class="card-panel #e040fb purple accent-2" style="height: 200px"></div>
+      </div>
+      <a href="#user"><img class="circle" src="./assets/img/c.jpeg "></a>
+      <a href="#name"><span class="white-text name">Cherehil B. Galamiton</span></a>
+      <a href="#email"><span class="white-text email">cherehilgalamiton@gmail.com</span></a>
+    </div></li>
+    <div class="card-panel #18ffff cyan accent-2" style="height: 510px">
+    <li><a class="waves-effect" href="index.html">Home</a></li>
+    <li><a class="waves-effect" href="blog.html">Blog</a></li>
+    <li><a class="waves-effect" href="login.html">Login</a></li>
+  </ul></div>
+  <a href="#" data-target="slide-out" class="sidenav-trigger  btn-floating pulse" style="margin-top: 20px"><i class="material-icons">menu</i></a>
+  
         <div id="container">
                 <div id="header"></div>
             
                 <h1>WELCOME TO MY PAGE</h1>
-                <ul class="navbar">
-                        <a  href="index.html">Home</a>
-                        <a class="active" href="blog.html">Blog</a> 
-                        <a  href="login.html" >Login</a></button>         
-                         </ul>
-                <i><h1>About Myself</h1></i>
-                <h3>
+              
+               <b id="a">About Myself</b>
+<h5>
                 My name is Cherehil B. Galamiton, Im 28 years of old, from Purok 1 Gingoog City Mis.Or. Im studying of Bachelor of Science in Information Technology at Gingoog City College.
                 My Mother Name is Corazon B. Galamiton and she had a 3 siblings, but my Father was died, 11 years ago. Im the second daughter among three of us, 
                 my oldest sister was married, and the youngest is still in First year College at Gingoog City College.We have our own little Vegetable Store at the market 
                 and we are helping my mother everyday before we going school. My Favorite color is Pink, i love traveling and hung out with friends. 
-
-                </h3>      
-                 <i><b id="fol">Follow me on:<br>
+</h5>
+<div class="clearfix">
+                 <i><b id="fol">Follow me on:<br></a>
                  <img src="./assets/img/fb_icon.png" id="fb">
                  <a href=""  id="info">Cherehil Badilla Galamiton</a>
                  <img src="./assets/img/email_icon.png" id="email">
                  <a href="" id="infos">cherehilgalamiton@gmail.com</a>
-                </i></b>     
-        </div>
-        
-       
+                </i></b>  </div>
+        </div>   
+                <script src="./assets/js/materialize.min.js"></script>
+                <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    var elems = document.querySelectorAll('.sidenav');
+                    var instances = M.Sidenav.init(elems);
+                   
+                });
+                </script>
+              
 </body>
 </html>
